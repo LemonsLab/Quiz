@@ -1,15 +1,13 @@
-import React, {PropTypes, Component} from 'react';
-import {Text} from 'react-native';
+import React            from 'react';
+import {StackNavigator} from 'react-navigation';
+import Menu             from './containers/Menu/Menu.js';
+import Settings         from './components/Settings/Settings.js';
 
 
-class AppView extends Component {
-
-    render() {
-        return (
-            <Text>Hello worlsssdd!</Text>
-        );
-    }
-}
+const AppView = StackNavigator({
+    Menu      : { screen: Menu     },
+    Settings  : { screen: Settings },
+});
 
 
 export default AppView;
