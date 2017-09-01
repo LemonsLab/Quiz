@@ -14,20 +14,23 @@ const imagesPNG = { logo: require('../../components/images/group.png') };
 class Menu extends React.Component {
     render(){
         return(
-              <LinearGradient colors={['#0E4B0E', '#86BA86']} style={styles.MenuContainer}>
+              <LinearGradient colors={['#FE5195', '#F76F62']} style={styles.MenuContainer}>
                   <Images logoStyle={styles.logo} logo={imagesPNG.logo}/>
 
-                  <TouchableHighlight style={styles.button} onPress={()=>navigate('Settings')}  underlayColor='#86BA86'>
-                      <View><Text style={styles.text1}>Rozpocznij test</Text></View>
-                  </TouchableHighlight>
+                  <Text style={styles.header}>Jakiś tekst nagłówkowy</Text>
 
-                  <TouchableHighlight style={styles.button}  onPress={()=>navigate('Settings')} underlayColor='#86BA86'>
-                      <View><Text style={styles.text2}>Twoje testy</Text></View>
-                  </TouchableHighlight>
+                  <Text style={styles.subheader}>Tekst mniejszą czcionką pod większym nagłówkiem</Text>
 
-                  <TouchableHighlight style={styles.button}  onPress={()=>navigate('Settings')}  underlayColor='#86BA86'>
-                      <View><Text style={styles.text2}>Ustawienia</Text></View>
-                  </TouchableHighlight>
+                  <View style={styles.horizontal}>
+                    <TouchableHighlight style={styles.button} onPress={()=>navigate('Settings')}  underlayColor='#D69FB1'>
+                        <View><Text style={styles.text1}>Rozpocznij test</Text></View>
+                    </TouchableHighlight>
+
+                    <TouchableHighlight style={styles.button}  onPress={()=>navigate('Settings')} underlayColor='#D69FB1'>
+                        <View><Text style={styles.text2}>Twoje testy</Text></View>
+                    </TouchableHighlight>
+                  </View>
+
               </LinearGradient>
         )
     }
@@ -43,23 +46,45 @@ const styles = StyleSheet.create({
         marginTop       : 40,
         marginBottom    : 70,
         width           : 111,
-        height          : 120,
+        height          : 130,
     },
     button:{
-        marginLeft      : 50,
-        marginRight     : 50,
-        marginTop       : 20,
-        height          : 50,
+        marginLeft      : 18,
+        marginTop       : 100,
+        height          : 40,
         backgroundColor : 'white',
+        borderRadius    :  3,
     },
     text1:{
-        fontSize        :  25,
-        margin          :  10,
-        marginLeft      :  50,
+        fontSize        :  20,
+        color           :  '#FE5195',
+        marginTop       :  5,
+        marginLeft      :  18,
+        marginRight     :  15,
     },
     text2:{
-        fontSize        :  25,
-        margin          :  10,
-        marginLeft      :  80,
+        fontSize        :  20,
+        color           :  '#FE5195',
+        marginLeft      :  30,
+        marginTop       :  5,
+        marginRight     :  30,
+    },
+    horizontal:{
+        flexDirection   : 'row',
+    },
+    header:{
+      marginLeft        :  20,
+      marginRight       :  20,
+      fontSize          :  25,
+      color             : 'white',
+      textAlign         : 'center',
+    },
+    subheader:{
+      marginLeft        :  70,
+      marginRight       :  70,
+      marginTop         :  20,
+      fontSize          :  15,
+      color             : 'white',
+      textAlign         : 'center',
     },
 });
