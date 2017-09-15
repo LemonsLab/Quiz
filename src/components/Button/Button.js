@@ -1,9 +1,19 @@
 import React from 'react';
-import { Button } from 'react-native'
+import {
+    Text,
+    TouchableHighlight,
+    View,
+    StyleSheet
+} from 'react-native';
+import styles from '../../style/Button.js'
 
 
-
-const ButtonComponent = (props) => <Button title={props.title} style={props.butttonStyle} />;
+const ButtonComponent = (props) => 
+    <TouchableHighlight style={styles.button} onPress={props.onPress} underlayColor='#D69FB1'>
+             <View>
+                 <Text style={styles.text}>{props.title}</Text>
+             </View>
+    </TouchableHighlight>;
 
 
 export  default  ButtonComponent;
