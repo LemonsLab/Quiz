@@ -6,9 +6,18 @@ import {
         View,
         } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import TextComponent from '../Text/Text'
 import SettingSectionSwitcher from '../SettingSectionSwitcher/SettingSectionSwitcher.js';
 import SettingSectionSlider from '../SettingSectionSlider/SettingSectionSlider.js';
 import SettingSubmitButton from '../SettingSubmitButton/SettingSubmitButton.js';
+import styles from '../../style/Settings/Settings.js'
+
+
+export const SubmitButtonConfig = [
+    text        =   'ZAPISZ USTAWIENIA',
+    titleStyle  =   styles.titleStyle,
+];
+
 
 class Settings extends React.Component{
 
@@ -20,7 +29,10 @@ class Settings extends React.Component{
         <ScrollView>
             <LinearGradient start={{x: 0.0, y: 0.25}} end={{x: 0.5, y: 1.5}} colors={['#fc5888', '#f77061']}>
                 <View style={styles.topContainer}>
-                    <Text style={styles.settingsTitle}>USTAWIENIA</Text>
+                    <TextComponent
+                         style={styles.settingsTitle}
+                         text='USTAWIENIA'
+                    />
                 </View>
             </LinearGradient>
 
@@ -41,26 +53,10 @@ class Settings extends React.Component{
                     maximum={60}
                     initialNumber={30}
                     continuatingText=':00 minut'/>
-                <SettingSubmitButton title='ZAPISZ USTAWIENIA' onPress={this.savingSettings.bind(this)}/>
+                <SettingSubmitButton/>
             </View>
         </ScrollView>
     );
   }
 }
 export default Settings
-
-const styles = StyleSheet.create({
-    topContainer:{
-        height            :   70,
-    },
-    grayBackground:{
-        height            :   550,
-        backgroundColor   :   '#E0E0E0',
-    },
-    settingsTitle:{
-      color               :   'white',
-      textAlign           :   'center',
-      marginTop           :   25,
-      fontSize            :   15,
-    },
-});

@@ -2,10 +2,10 @@ import React from 'react';
 import {
     Slider,
     StyleSheet,
-    Switch,
     Text,
     View
 } from 'react-native';
+import styles from '../../style/Settings/LongSlider.js'
 
 class LongSlider extends React.Component{
     constructor(props) {
@@ -40,17 +40,3 @@ class LongSlider extends React.Component{
 export default LongSlider;
 
 
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 5,
-    },
-});

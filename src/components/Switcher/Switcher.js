@@ -6,6 +6,8 @@ import {
     View
 } from 'react-native';
 
+
+
 class Switcher extends React.Component{
 
     constructor(props) {
