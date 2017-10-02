@@ -2,13 +2,18 @@ import React  from 'react';
 import {
         Image,
         ScrollView,
-        StyleSheet,
-        Text,
         View,
         } from 'react-native';
 import LinearGradient       from 'react-native-linear-gradient';
-import SettingSubmitButton  from '../SettingSubmitButton/SettingSubmitButton.js';
+import SettingSubmitButton  from '../TestSubmitButton/TestSubmitButton.js';
 import QuestionAndAnswers   from '../QuestionAndAnswers/QuestionAndAnswers.js';
+import styles               from '../../style/Test.js'
+import TextComponent from   '../Text/Text.js';
+
+export const SubmitButtonConfig = [
+    text        =   'ZAPISZ USTAWIENIA',
+    titleStyle  =   styles.titleStyle,
+];
 
 const imagesPNG = {
                     timer: require('../images/timer.png'),
@@ -33,8 +38,14 @@ class Test extends React.Component{
             <LinearGradient start={{x: 0.0, y: 0.25}} end={{x: 0.5, y: 1.5}} colors={['#fc5888', '#f77061']}>
                 <View style={styles.topContainer}>
                     <View style={{flexDirection : 'row',}}>
-                        <Image source={imagesPNG.timer} style={styles.image}/>
-                        <Text style={styles.timer}>{this.state.timeLeft}</Text>
+                        <Image
+                                source  =   { imagesPNG.timer     }
+                                style   =   { styles.image        }
+                        />
+                        <TextComponent
+                                text    =   { this.state.timeLeft }
+                                style   =   { styles.timer        }
+                        />
                     </View>
                 </View>
             </LinearGradient>
@@ -52,7 +63,7 @@ class Test extends React.Component{
                 </ScrollView>
 
                 <View style={{marginBottom: 5}}>
-                    <SettingSubmitButton title='ZAKOŃCZ TEST' onPress={this.finishTest.bind(this)}/>
+                    <SettingSubmitButton/>
                 </View>
             </View>
         </View>
@@ -60,32 +71,3 @@ class Test extends React.Component{
   }
 }
 export default Test
-
-const styles = StyleSheet.create({
-    topContainer:{
-        height            :   50,
-        alignItems        :   'center',
-    },
-    underTitle:{
-        flex              :   1,
-    },
-    timer:{
-      color               :   'white',
-      textAlign           :   'center',
-      marginTop           :   12,
-      fontSize            :   19,
-    },
-    frameForQuestions:{
-      height              :   430,
-    },
-    background:{
-      flex                :   1,
-      backgroundColor     :   '#E0E0E0',
-    },
-    image:{
-      width               :   25,
-      height              :   25,
-      marginTop           :   13,
-      marginRight         :   10,
-    },
-});

@@ -3,7 +3,6 @@ import {
     Text,
     TouchableHighlight,
     View,
-    StyleSheet
 } from 'react-native';
 import styles from '../../style/Button.js'
 

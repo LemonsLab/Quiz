@@ -1,10 +1,9 @@
 import React  from 'react';
 import {
-        Image,
-        StyleSheet,
         Text,
         View,
         } from 'react-native';
+import styles from '../../style/Question.js';
 
 class Question extends React.Component{
   render(){
@@ -18,14 +17,3 @@ class Question extends React.Component{
 }
 export default Question
 
-const styles = StyleSheet.create({
-  center:{
-    textAlign           :   'center',
-    marginTop           :   10,
-    marginBottom        :   20,
-    marginLeft          :   15,
-    marginRight         :   15,
-    color               :   'black',
-    fontSize            :   15,
-  },
-});

@@ -1,6 +1,5 @@
 import React  from 'react';
 import {
-        StyleSheet,
         View,
         } from 'react-native';
 import Question             from '../Question/Question.js';
@@ -67,7 +66,4 @@ class QuestionAndAnswers extends React.Component{
     );
   }
 }
-export default QuestionAndAnswers
-
-const styles = StyleSheet.create({
-});
+export default QuestionAndAnswers;

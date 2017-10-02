@@ -1,11 +1,11 @@
 import React from 'react';
 import {
     Image,
-    StyleSheet,
     Text,
     TouchableWithoutFeedback,
     View
 } from 'react-native';
+import styles from '../../style/Answer.js';
 
 const imagesPNG = {
                     arrowDown : require('../images/arrowDown.png'),
@@ -17,9 +17,9 @@ class Answer extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-        expanded       :   false,
-        linesNumber    :   1,
-        currentImage   :   imagesPNG.arrowDown,
+        expanded        :     false,
+        linesNumber     :     1,
+        currentImage    :     imagesPNG.arrowDown,
     };
   }
 
@@ -45,10 +45,18 @@ class Answer extends React.Component {
               <TouchableWithoutFeedback onPress={this.props.onPress}>
                   <View style={styles.row}>
                       <View style={styles.textFrame}>
-                          <Text numberOfLines={this.state.linesNumber} style={styles.text}>{this.props.textAnswer}</Text>
+                          <Text
+                              numberOfLines  =  { this.state.linesNumber }
+                              style          =  { styles.text            }
+                          >
+                                                { this.props.textAnswer  }
+                          </Text>
                       </View>
                       <TouchableWithoutFeedback onPress={this.changeImage.bind(this)}>
-                          <Image source={this.state.currentImage} style={styles.image}/>
+                          <Image
+                              source        =   { this.state.currentImage }
+                              style         =   { styles.image            }
+                          />
                       </TouchableWithoutFeedback>
                   </View>
               </TouchableWithoutFeedback>
@@ -58,36 +66,4 @@ class Answer extends React.Component {
 }
 export default Answer;
 
-const styles = StyleSheet.create({
-  containerUnchecked:{
-    marginLeft          :   20,
-    marginRight         :   20,
-    marginTop           :   10,
-    backgroundColor     :   'white',
-    borderRadius        :   2,
-  },
-  containerChecked:{
-    marginLeft          :   20,
-    marginRight         :   20,
-    marginTop           :   10,
-    backgroundColor     :   '#D1F54E',
-    borderRadius        :   2,
-  },
-  text:{
-    color               :   'black',
-    fontSize            :   14,
-    margin              :   10,
-  },
-  image:{
-    width               :   30,
-    height              :   30,
-    margin              :   5,
-  },
-  row:{
-    flexDirection       :   'row',
-    justifyContent      :   'space-between',
-  },
-  textFrame:{
-    flex                :   1,
-  },
-});
+
