@@ -7,12 +7,10 @@ import Settings         from './components/Settings/Settings.js';
 
 
 class AppView extends React.Component {
+
     render(){
         return(
-
-          <Test/>
-
-
+          <Settings/>
         )
     }
 }
