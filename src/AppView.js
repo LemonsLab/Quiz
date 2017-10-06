@@ -12,7 +12,7 @@ class AppView extends React.Component {
 
     render(){
         return(
-          <Settings/>
+          <ResultsWindow/>
         )
     }
 }
