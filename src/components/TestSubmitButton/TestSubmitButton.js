@@ -1,8 +1,11 @@
 import React  from 'react';
-
+import styles               from '../../style/Test.js'
 import CreateAdvancedButton from '../../HoC/ButtonHoC/CreateAdvancedButton.js';
-import {SubmitButtonConfig} from '../Test/Test.js';
 import Linear               from '../Linear/Linear.js';
+const SubmitButtonConfig = {
+    text        :   'ZAPISZ USTAWIENIA',
+    titleStyle  :   styles.titleStyle,
+};
 
 const SettingSubmitButton =  CreateAdvancedButton(SubmitButtonConfig)(Linear);
 

@@ -10,10 +10,6 @@ import QuestionAndAnswers   from '../QuestionAndAnswers/QuestionAndAnswers.js';
 import styles               from '../../style/Test.js'
 import TextComponent from   '../Text/Text.js';
 
-export const SubmitButtonConfig = [
-    text        =   'ZAPISZ USTAWIENIA',
-    titleStyle  =   styles.titleStyle,
-];
 
 const imagesPNG = {
                     timer: require('../images/timer.png'),
@@ -26,9 +22,6 @@ class Test extends React.Component{
     this.state = {
         timeLeft    :   '45:46',
     };
-  }
-
-  finishTest(){
   }
 
 
