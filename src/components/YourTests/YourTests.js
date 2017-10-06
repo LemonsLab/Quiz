@@ -1,12 +1,12 @@
 import React  from 'react';
 import {
         ScrollView,
-        StyleSheet,
         Text,
         View,
         } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import TestViewSection from '../TestViewSection/TestViewSection.js';
+import styles from '../../style/YourTests/YourTests';
 
 class YourTests extends React.Component{
   render(){
@@ -33,22 +33,3 @@ class YourTests extends React.Component{
 }
 export default YourTests
 
-const styles = StyleSheet.create({
-    topContainer:{
-        flex              :   1,
-    },
-    yourTestsTitle:{
-      color               :   'white',
-      textAlign           :   'center',
-      marginTop           :   25,
-      marginBottom        :   15,
-      fontSize            :   15,
-    },
-    background:{
-      flex                :   1,
-    },
-    frontalBackground:{
-      flex                :   1,
-      margin              :   15,
-    },
-});
