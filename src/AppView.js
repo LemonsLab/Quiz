@@ -1,7 +1,5 @@
 
 import React            from 'react';
-
-import Test             from './components/Test/Test.js';
 import Settings         from './components/Settings/Settings.js';
 import YourTests        from './components/YourTests/YourTests.js';
 import YourTestViewContainer     from './containers/YourTestViewContainer/YourTestViewContainer.js';
