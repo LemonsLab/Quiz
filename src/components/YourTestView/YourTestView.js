@@ -1,14 +1,14 @@
 import React from 'react';
 import {
     ScrollView,
-    StyleSheet,
     Text,
-    TouchableHighlight,
     View
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import MenuButton     from '../MenuButton/MenuButton';
 import ResultsAnswer  from '../ResultsAnswer/ResultsAnswer';
+import styles         from '../../style/YourTestViewWindow/YourTestView.js';
+
 
 class YourTestView extends React.Component {
 
@@ -39,7 +39,7 @@ class YourTestView extends React.Component {
 
     render(){
         return(
-              <LinearGradient colors={['#FE5195', '#F76F62']} style={{flex: 1}} colors={['#fc5888', '#f77061']}>
+              <LinearGradient colors={['#FE5195', '#F76F62']} style={{flex: 1}}>
                     <View style={styles.topContainer}>
                           <Text style={styles.title}>Test #{this.state.testNr}</Text>
                           <Text style={styles.title}>{this.state.result}%</Text>
@@ -48,12 +48,24 @@ class YourTestView extends React.Component {
                     <ScrollView>
 
                     <ScrollView style={styles.questionsFrame}>
-                        <Text style={styles.center}>Pytanie {this.state.questionNumber} / {this.state.numberOfAllQuestions}</Text>
-                        <Text style={styles.center}>{this.state.questionText}</Text>
+                        <Text
+                            style={styles.center}>Pytanie {this.state.questionNumber} / {this.state.numberOfAllQuestions}</Text>
+                        <Text
+                            style={styles.center}>
+                            {this.props.question}</Text>
 
-                        <ResultsAnswer checked={this.state.checkedA} goodAnswer={this.state.goodAnswerA} textAnswer={this.state.textAnswerA}/>
-                        <ResultsAnswer checked={this.state.checkedB} goodAnswer={this.state.goodAnswerB} textAnswer={this.state.textAnswerB}/>
-                        <ResultsAnswer checked={this.state.checkedC} goodAnswer={this.state.goodAnswerC} textAnswer={this.state.textAnswerC}/>
+                        <ResultsAnswer
+                            checked={this.state.checkedA}
+                            goodAnswer={this.state.goodAnswerA}
+                            textAnswer={this.props.A}/>
+                        <ResultsAnswer
+                            checked={this.state.checkedB}
+                            goodAnswer={this.state.goodAnswerB}
+                            textAnswer={this.props.B}/>
+                        <ResultsAnswer
+                            checked={this.state.checkedC}
+                            goodAnswer={this.state.goodAnswerC}
+                            textAnswer={this.props.C}/>
                         <View style={{marginBottom: 30}}/>
                     </ScrollView>
 
@@ -68,43 +80,3 @@ class YourTestView extends React.Component {
     }
 }
 export default YourTestView;
-
-const styles = StyleSheet.create({
-  topContainer:{
-      height             :   70,
-      flexDirection      :   'row',
-      justifyContent     :   'space-between',
-      marginLeft         :   20,
-      marginRight        :   20,
-  },
-  title:{
-      color              :   'white',
-      textAlign          :   'center',
-      marginTop          :   25,
-      fontSize           :   15,
-  },
-  horizontal:{
-      flexDirection      :   'row',
-      justifyContent     :   'space-between',
-      flex               :   1,
-      marginLeft         :   5,
-      marginRight        :   5,
-      marginBottom       :   10,
-      marginTop          :   10,
-  },
-  questionsFrame:{
-    backgroundColor      :   '#E0E0E0',
-    marginLeft           :   5,
-    marginRight          :   5,
-    height               :   400,
-  },
-  center:{
-    textAlign           :   'center',
-    marginTop           :   10,
-    marginBottom        :   20,
-    marginLeft          :   15,
-    marginRight         :   15,
-    color               :   'black',
-    fontSize            :   15,
-  },
-});

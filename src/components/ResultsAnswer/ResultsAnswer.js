@@ -1,11 +1,11 @@
 import React from 'react';
 import {
     Image,
-    StyleSheet,
     Text,
     TouchableWithoutFeedback,
     View
 } from 'react-native';
+import styles from '../../style/YourTestViewWindow/ResultsAnswer.js';
 
 const imagesPNG = {
                     arrowDown : require('../images/arrowDown.png'),
@@ -45,7 +45,6 @@ class Answer extends React.Component {
 
         return(
           <View style={panelColor}>
-
               <View style={styles.row}>
                   <View style={styles.textFrame}>
                       <Text numberOfLines={this.state.linesNumber} style={styles.text}>{this.props.textAnswer}</Text>
@@ -54,50 +53,9 @@ class Answer extends React.Component {
                       <Image source={this.state.currentImage} style={styles.image}/>
                   </TouchableWithoutFeedback>
               </View>
-
           </View>
         )
     }
 }
 export default Answer;
 
-const styles = StyleSheet.create({
-  containerUnchecked:{
-    marginLeft          :   20,
-    marginRight         :   20,
-    marginTop           :   10,
-    backgroundColor     :   'white',
-    borderRadius        :   2,
-  },
-  containerChecked:{
-    marginLeft          :   20,
-    marginRight         :   20,
-    marginTop           :   10,
-    backgroundColor     :   '#D1F54E',
-    borderRadius        :   2,
-  },
-  containerWrong:{
-    marginLeft          :   20,
-    marginRight         :   20,
-    marginTop           :   10,
-    backgroundColor     :   'red',
-    borderRadius        :   2,
-  },
-  text:{
-    color               :   'black',
-    fontSize            :   14,
-    margin              :   10,
-  },
-  image:{
-    width               :   30,
-    height              :   30,
-    margin              :   5,
-  },
-  row:{
-    flexDirection       :   'row',
-    justifyContent      :   'space-between',
-  },
-  textFrame:{
-    flex                :   1,
-  },
-});

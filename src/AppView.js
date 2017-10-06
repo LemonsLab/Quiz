@@ -1,11 +1,11 @@
-import React            from 'react';
-import YourTestView     from './components/YourTestView/YourTestView.js';
+import React                     from 'react';
+import YourTestViewContainer     from './containers/YourTestViewContainer/YourTestViewContainer.js';
 
 
 class AppView extends React.Component {
     render(){
         return(
-          <YourTestView/>
+          <YourTestViewContainer/>
         )
     }
 }
