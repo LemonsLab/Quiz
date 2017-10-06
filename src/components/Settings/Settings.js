@@ -13,16 +13,9 @@ import SettingSubmitButton from '../SettingSubmitButton/SettingSubmitButton.js';
 import styles from '../../style/Settings/Settings.js'
 
 
-export const SubmitButtonConfig = [
-    text        =   'ZAPISZ USTAWIENIA',
-    titleStyle  =   styles.titleStyle,
-];
 
 
 class Settings extends React.Component{
-
-  savingSettings(){
-  }
 
   render(){
     return(
