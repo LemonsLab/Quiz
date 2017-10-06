@@ -10,7 +10,10 @@ const CreateAdvancedButton = (params) => (WrapperComponent) => class Button exte
         super(props)
     }
 
-    render(){
+
+
+     render(){
+
         return(
             <TouchableHighlight>
                 <View>

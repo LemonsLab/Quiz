@@ -1,6 +1,9 @@
 import React  from 'react';
 import {
-    View,
+
+    StyleSheet,
+    Text,
+  View
 } from 'react-native';
 import LinearGradient       from 'react-native-linear-gradient';
 import TextComponent        from '../Text/Text.js';

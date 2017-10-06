@@ -12,7 +12,7 @@ const MenuCard = createContainer(Menu);
 
 
 
-export default MenuCard
+export default MenuCard;
 
 
 
