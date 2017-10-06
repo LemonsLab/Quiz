@@ -1,10 +1,6 @@
-/**
- * Created by piotrandrzejewski on 15.09.2017.
- */
 import React from 'react';
 import {
     Text,
-    TouchableHighlight,
     View
 } from 'react-native';
 import Images from '../../components/image/image';
@@ -18,7 +14,7 @@ const imagesPNG = { logo: require('../../components/images/group.png') };
 
 
 
-const Menu = () => {
+const Menu = (props) => {
     return <View>
         <Images logoStyle={styles.logo} logo={imagesPNG.logo}/>
 
@@ -27,8 +23,8 @@ const Menu = () => {
         <Text style={styles.subheader}>Tekst mniejszą czcionką pod większym nagłówkiem</Text>
 
         <View style={styles.horizontal}>
-            <Button title='Rozpocznij test' onPress={()=>navigate('Settings')}/>
-            <Button title='Twoje testy' onPress={()=>navigate('Settings')}/>
+            <Button title='Rozpocznij test' onPress={()=>props.navigation.navigate('Test')}/>
+            <Button title='Twoje testy' onPress={()=>props.navigation.navigate('YourTests')}/>
         </View>
     </View>
 };
