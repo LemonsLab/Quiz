@@ -44,6 +44,7 @@ class Settings extends React.Component{
                     maximum={60}
                     initialNumber={30}
                     continuatingText=':00 minut'/>
+                <View style={{marginTop : 10}}/>
                 <SettingSubmitButton/>
             </View>
         </ScrollView>

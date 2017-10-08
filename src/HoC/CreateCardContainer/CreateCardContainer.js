@@ -3,9 +3,10 @@
  */
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
-import Images from '../../components/image/image';
+import Images from '../../components/image/image.js';
 import {
     StyleSheet,
+    TouchableWithoutFeedback,
     View
 } from 'react-native';
 
@@ -45,9 +46,14 @@ const CreateContainer = (WrappedComponent) =>  class GlobalContainer extends Rea
                 colors={['#fc5888', '#f77061']}
                 style={styles.Container}>
                 <View style={styles.image}>
-                    <Images
-                        logoStyle={styles.logo}
-                        logo={imagesPNG.settings}/>
+                    <TouchableWithoutFeedback onPress={()=>this.props.navigation.navigate('Settings')}>
+                        <View>
+                            <Images
+                                logoStyle={styles.logo}
+                                logo={imagesPNG.settings}
+                            />
+                        </View>
+                    </TouchableWithoutFeedback>
 
                 </View>
 

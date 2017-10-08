@@ -3,7 +3,7 @@ import styles               from '../../style/Test.js'
 import CreateAdvancedButton from '../../HoC/ButtonHoC/CreateAdvancedButton.js';
 import Linear               from '../Linear/Linear.js';
 const SubmitButtonConfig = {
-    text        :   'ZAPISZ USTAWIENIA',
+    text        :   'ZAKOŃCZ TEST',
     titleStyle  :   styles.titleStyle,
 };
 

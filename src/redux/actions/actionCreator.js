@@ -11,9 +11,10 @@ import {
 
 
 
-export function setQuestionSize(){
+export function setQuestionSize(num){
     return {
-        type:SET_QUESTIONS_SIZE
+        type:SET_QUESTIONS_SIZE,
+
     }
 }
 
