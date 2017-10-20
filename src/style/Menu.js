@@ -3,15 +3,15 @@ import {
 } from 'react-native';
 
 const styles = StyleSheet.create({
-    MenuContainer:{
+    Container:{
         flex            :   1,
     },
     logo:{
         marginLeft      : 135,
         marginTop       : 70,
         marginBottom    : 70,
-        width           : 130,
-        height          : 140,
+        width           : 40,
+        height          : 40,
     },
     horizontal:{
         flexDirection   : 'row',
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
         marginLeft        :  20,
         marginRight       :  20,
         fontSize          :  25,
-        color             : 'white',
+        color             : 'black',
         textAlign         : 'center',
     },
     subheader:{
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         marginRight       :  70,
         marginTop         :  20,
         fontSize          :  15,
-        color             : 'white',
+        color             : 'black',
         textAlign         : 'center',
     },
 });
