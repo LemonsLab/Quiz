@@ -7,7 +7,6 @@ import {
     View,
     StyleSheet,
 } from 'react-native';
-import { PropTypes } from 'prop-types'
 import LinearGradient from 'react-native-linear-gradient';
 import IconButton from '../../components/IconButton/IconButton'
 import Button from '../../components/Button/Button';
@@ -29,12 +28,14 @@ let config =  {
         buttonTitle:"Start",
         navigationTitle:"Test",
         navigationName:"Test",
+        underlayColor:"#D69FB1"
     },
 
     storeButton : {
         buttonTitle:"Twoje testy",
         navigationTitle:"YourTests",
         navigationName:"YourTests",
+        underlayColor:"#D69FB1"
     }
 
 
@@ -71,12 +72,14 @@ let config =  {
                    style={styles.horizontal}>
                    <Button
                        title={config.testButton.buttonTitle}
+                       underlayColor={config.testButton.underlayColor}
                        onPress={
                            () =>
                            this.props.navigation
                                             .navigate(config.testButton.navigationTitle , {name:config.testButton.navigationName}) }/>
                     <Button
                         title={config.storeButton.buttonTitle}
+                        underlayColor={config.storeButton.underlayColor}
                         onPress={
                             ()=> this.props.navigation
                                             .navigate(config.storeButton.navigationTitle , {name:config.storeButton.navigationName}) }/>
@@ -89,19 +92,6 @@ let config =  {
 
 
 };
-
-
-Menu.propTypes = {
-    config: PropTypes.shape({
-        imageSource: PropTypes.string,
-        gradientColors: PropTypes.objectOf(PropTypes.string),
-        icon:PropTypes.objectOf(PropTypes.string),
-        testButton:PropTypes.objectOf(PropTypes.string),
-        storeButton:PropTypes.objectOf(PropTypes.string)
-
-    }),
-};
-
 
 
 

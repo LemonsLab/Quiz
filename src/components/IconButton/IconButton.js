@@ -8,6 +8,7 @@ import {
     TouchableWithoutFeedback,
     View
 } from 'react-native';
+import { PropTypes } from 'prop-types'
 
 const IconButton = (props) => {
 
@@ -23,3 +24,9 @@ const IconButton = (props) => {
 };
 
 export default IconButton;
+
+IconButton.propTypes = {
+    onPress:PropTypes.func,
+    imageStyle:PropTypes.number,
+    imageSource:PropTypes.number
+};
