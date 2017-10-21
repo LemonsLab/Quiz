@@ -8,31 +8,16 @@ import {
 
 
 
-class Switcher extends React.Component{
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            switchIsOn  :   this.props.switchedOn,
-        };
-    }
-
-    render(){
-        return(
-            <View>
-                <Switch
-                    thumbTintColor  =   '#fc5888'
-                    onTintColor     =   '#f5afbb'
-                    onValueChange   =   {(value) => this.setState({switchIsOn: value})}
-                    style           =   {this.props.style}
-                    value           =   {this.state.switchIsOn} />
-            </View>
-        )
-    }
-}
-export default Switcher;
+const Switcher = (props) => {
+   return <View>
+            <Switch
+                thumbTintColor  =   '#fc5888'
+                onTintColor     =   '#f5afbb'
+                onValueChange   =   {(value) => props.changeValue(value)}
+                style           =   {props.style}
+                value           =   {props.switchedOn} />
+          </View>
+};
 
 
-
-const styles = StyleSheet.create(
-);
+export default Switcher

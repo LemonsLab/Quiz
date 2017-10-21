@@ -17,6 +17,9 @@ class SettingSectionSlider extends React.Component {
                     maximum={this.props.maximum}
                     initialNumber={this.props.initialNumber}
                     continuatingText={this.props.continuatingText}
+                    changeValue={this.props.changeValue}
+                    maximumTrackTintColor={this.props.maximumTrackTintColor}
+                    thumbTintColor={this.props.thumbTintColor}
                 />
             </View>
         )

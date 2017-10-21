@@ -9,9 +9,14 @@ import styles from '../../style/Settings/SettingsSectionSwitcher.js'
 class SettingSection extends React.Component {
     render(){
         return(
-            <View style={styles.section}>
+            <View
+                style={styles.section}>
                 <Text style={styles.text}>{this.props.text}</Text>
-                <Switcher style={styles.switcher} switchedOn={this.props.switchedOn}/>
+                <Switcher
+                    style={styles.switcher}
+                    switchedOn={this.props.switchedOn}
+                    changeValue={this.props.changeValue}
+                />
             </View>
         )
     }

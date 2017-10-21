@@ -12,7 +12,8 @@ import { PropTypes } from 'prop-types'
 
 const IconButton = (props) => {
 
-    return <TouchableWithoutFeedback onPress={props.onPress}>
+    return <TouchableWithoutFeedback
+        onPress={props.onPress}>
         <View>
             <Images
                 imageStyle={props.imageStyle}

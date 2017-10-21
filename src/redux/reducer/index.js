@@ -5,7 +5,7 @@ import {
     SET_QUESTIONS_SIZE,
     SET_SHOULD_SAVE_TEST,
     SET_TEST_TIME_LIMIT,
-    SET_TIME_PER_TEST
+    SET_SHOULD_TIME_LIMIT
 } from '../actions/actionTypes';
 
 
@@ -14,8 +14,8 @@ import {
 const initialState = {
      questions_size:25,
      test_time_limit:false,
-     time_per_test:null,
-     should_save_test:false
+     time_per_test:10,
+     should_save_test:true
 };
 
 
@@ -26,25 +26,25 @@ export default (state=initialState,actions) => {
         case SET_QUESTIONS_SIZE:
             return  {
                 ...state,
-                questions_size:true,
+                questions_size:actions.questionSize,
 
             };
         case SET_SHOULD_SAVE_TEST:
             return  {
                 ...state,
-                questions_size:true,
+                should_save_test:actions.shouldTest,
 
             };
         case SET_TEST_TIME_LIMIT:
             return  {
                 ...state,
-                questions_size:true,
+                time_per_test:actions.limitTime,
 
             };
-        case SET_TIME_PER_TEST:
+        case SET_SHOULD_TIME_LIMIT:
             return  {
                 ...state,
-                questions_size:false,
+                test_time_limit:actions.shouldLimit,
 
             };
         default:

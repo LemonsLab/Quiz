@@ -5,34 +5,37 @@ import {
     SET_QUESTIONS_SIZE,
     SET_SHOULD_SAVE_TEST,
     SET_TEST_TIME_LIMIT,
-    SET_TIME_PER_TEST
+    SET_SHOULD_TIME_LIMIT
 } from './actionTypes';
 
 
 
 
-export function setQuestionSize(num){
+export function setQuestionSize(questionSize){
     return {
         type:SET_QUESTIONS_SIZE,
-
+        questionSize
     }
 }
 
-export function setShouldSaveTest(){
+export function setShouldSaveTest(shouldTest){
     return {
-        type:SET_SHOULD_SAVE_TEST
+        type:SET_SHOULD_SAVE_TEST,
+        shouldTest
     }
 }
 
-export function setTimeLimits(){
+export function setTimeLimits(limitTime){
     return {
-        type:SET_TEST_TIME_LIMIT
+        type:SET_TEST_TIME_LIMIT,
+        limitTime
     }
 }
 
-export function setTimePerTest(){
+export function setTimePerTest(shouldLimit){
     return {
-        type:SET_TIME_PER_TEST
+        type:SET_SHOULD_TIME_LIMIT,
+        shouldLimit
     }
 }
 
