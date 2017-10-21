@@ -84,7 +84,13 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 
-
+/* <View style={styles.topContainer}>
+ <TextComponent
+ style={styles.settingsTitle}
+ text={config.title}
+ />
+ </View>
+ */
 
 
 
@@ -108,12 +114,6 @@ class Settings extends React.Component{
                 <LinearGradient
                     start={config.gradient.start} end={config.gradient.end}
                     colors={[config.gradient.colors.firstColor,config.gradient.colors.secondColor ]}>
-                    <View style={styles.topContainer}>
-                        <TextComponent
-                            style={styles.settingsTitle}
-                            text={config.title}
-                        />
-                    </View>
                 </LinearGradient>
 
                 <View style={styles.grayBackground}>
@@ -148,7 +148,6 @@ class Settings extends React.Component{
                         initialNumber={time_per_test}
                         continuatingText={config.timeConfig.additionalDescription}/>
                     <View style={{marginTop : 10}}/>
-                    <SettingSubmitButton/>
                 </View>
             </ScrollView>
         );
