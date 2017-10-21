@@ -1,3 +1,6 @@
+/**
+ * Created by piotrandrzejewski on 21.10.2017.
+ */
 import React from 'react';
 import {
     StyleSheet,
@@ -9,9 +12,9 @@ import {
 class MenuButton extends React.Component {
     render(){
         return(
-          <TouchableHighlight style={styles.button} onPress={this.props.onPress} underlayColor='#D69FB1'>
-              <View><Text style={styles.text}>{this.props.title}</Text></View>
-          </TouchableHighlight>
+            <TouchableHighlight style={styles.button} onPress={this.props.onPress} underlayColor='#D69FB1'>
+                <View><Text style={styles.text}>{this.props.title}</Text></View>
+            </TouchableHighlight>
         )
     }
 }
