@@ -18,7 +18,7 @@ import {
     setShouldSaveTest,
     setTimeLimits,
     setTimePerTest
-} from '../../redux/actions/actionCreator'
+} from '../../redux/settings/actions/actionCreator'
 
 
 

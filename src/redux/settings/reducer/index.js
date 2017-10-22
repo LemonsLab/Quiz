@@ -6,7 +6,7 @@ import {
     SET_SHOULD_SAVE_TEST,
     SET_TEST_TIME_LIMIT,
     SET_SHOULD_TIME_LIMIT
-} from '../actions/actionTypes';
+} from '../../settings/actions/actionTypes';
 
 
 

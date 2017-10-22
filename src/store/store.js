@@ -5,11 +5,13 @@ import {
     createStore,
     combineReducers
 } from 'redux';
-import  reducerSettings from '../redux/reducer/index'
+import  reducerSettings from '../redux/settings/reducer/index'
+import  reducerTest from '../redux/test/reducer/index'
 
 
 const reducer = combineReducers({
     reducerSettings:reducerSettings,
+    reducerTest:reducerTest
 
 });
 
